@@ -20,7 +20,6 @@ if (isset($_POST['email'], $_POST['newUsername'], $_POST['newPassword'], $_POST[
 
     if ($success) {
         session_start();
-        $_SESSION['flash_message'] = "Inscription réussie. Vous pouvez maintenant vous connecter.";
         header("Location: login.php");
 exit();
 

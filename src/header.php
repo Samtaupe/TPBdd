@@ -2,9 +2,6 @@
     require("connector.php");
     require("connexiontForm.php");
     session_start();
-    if(!isset($_SESSION["user"])){
-        $_SESSION["user"]=false;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -28,13 +25,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="catalogue.php">Catalogue</a>
                 </li>
-                <li class="nav-item">
-                    <?php if (!isset($_SESSION['user_logged_in'])): ?>
+                
+                <?php if (isset($_SESSION['user_logged_in'])): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="livre_emprunt.php">Mes livres</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="logout.php">Déconnexion</a>
-                    <?php else: ?>
+                    </li>
+
+                <?php else: ?>
+                    <li class="nav-item">
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#connexionModal">Connexion</a>
-                    <?php endif; ?>
-                </li>
+                    </li>
+                <?php endif; ?>
 
             </ul>
         </div>
