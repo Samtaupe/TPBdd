@@ -39,6 +39,9 @@
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#connexionModal">Connexion</a>
                     </li>
                 <?php endif; ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="affRequete.php">Requêtes SQL</a>
+                </li> 
 
             </ul>
         </div>
