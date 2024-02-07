@@ -2,18 +2,9 @@
     require('header.php');
     require("getListe.php");
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue - Bibliothèque IUT</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
     <div class="container mt-5">
-        <h1>Catalogue des livres</h1>
+        <h1 class="titre">Catalogue des livres</h1>
         <div class="row">
             <?php foreach ($livres as $livre): ?>
             <div class="col-md-4">

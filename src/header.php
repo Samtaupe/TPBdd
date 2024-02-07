@@ -1,5 +1,6 @@
 <?php
     require("connector.php");
+    require("connexiontForm.php");
     session_start();
     if(!isset($_SESSION["user"])){
         $_SESSION["user"]=false;
@@ -12,7 +13,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibliothèque IUT</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,9 +29,36 @@
                     <a class="nav-link" href="catalogue.php">Catalogue</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inscription</a>
+                    <?php if (!isset($_SESSION['user_logged_in'])): ?>
+                        <a class="nav-link" href="logout.php">Déconnexion</a>
+                    <?php else: ?>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#connexionModal">Connexion</a>
+                    <?php endif; ?>
                 </li>
+
             </ul>
         </div>
     </nav>
 </header>
+<div id="loginModal" class="modal">
+  
+  <form id="loginForm" class="modal-content animate" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+      <div class="dlgheadcontainer">
+          <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <h1>Log-in !</h1>
+      </div>
+
+      <div class="dlgcontainer">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="login" id="login" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+              
+          <button type="submit" class="okbtn">Login</button>
+          <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
+
+      </div>
+
+  </form>
+</div>

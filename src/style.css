@@ -7,3 +7,7 @@
 .card, .card-img-top {
     transition: transform 0.3s ease-in-out;
 }
+
+.titre{
+    margin-block-end: 2%;
+}
