@@ -18,5 +18,10 @@ function dbconnect(){
     } 
     return $connexion; 
   }
-  
+
+  function enregistrerRequete($requete) {
+    $requete .= "\n"; 
+    file_put_contents("requetes.txt", $requete, FILE_APPEND);
+}
+
 ?> 

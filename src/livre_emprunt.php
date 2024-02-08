@@ -3,13 +3,9 @@ require('header.php');
 $user_id = $_SESSION['user_id'];
 
 $connexion = dbconnect();
-
-$stmt = $connexion->prepare("
-    SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie
-    FROM emprunt
-    JOIN livre ON emprunt.fkLivre = livre.id
-    WHERE emprunt.fkLecteur = ? 
-");
+$query = "SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? ";
+$stmt = $connexion->prepare($query);
+enregistrerRequete($query);
 
 $stmt->execute([$user_id]);
 $livresEmpruntes = $stmt->fetchAll(PDO::FETCH_ASSOC);

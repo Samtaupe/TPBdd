@@ -1,0 +1,35 @@
+SELECT * FROM livre WHERE disponible = 0 order by id desc limit 3
+
+SELECT * FROM livre WHERE disponible = 0 ORDER BY id DESC LIMIT 3
+SELECT * FROM livre WHERE disponible = 0 ORDER BY id DESC LIMIT 3
+SELECT * FROM lecteur WHERE pseudo = ?
+SELECT * FROM livre WHERE disponible = 0 ORDER BY id DESC LIMIT 3
+
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie
+FROM emprunt
+LEFT JOIN livre ON emprunt.fkLivre = livre.id
+WHERE emprunt.fkLecteur = ? 
+
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+DELETE FROM emprunt WHERE emprunt.fkLecteur = ? AND emprunt.fkLivre= ?
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
+SELECT * FROM lecteur WHERE pseudo = ?
+SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 

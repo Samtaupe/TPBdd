@@ -12,6 +12,13 @@
     margin-block-end: 2%;
 }
 
-.display-4 {
-    margin-left: 20%;
+.form-transition {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.form-visible {
+    opacity: 1;
+    visibility: visible;
 }

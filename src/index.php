@@ -1,7 +1,10 @@
 <?php
     require("header.php");
     try {
-        $stmt = dbConnect()->query("SELECT * FROM livre WHERE disponible = 0 order by id desc limit 3");
+        $query = "SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3";
+        $stmt = dbConnect()->query($query);
+        enregistrerRequete($query);
+
         if ($stmt === false) {
             throw new Exception('Erreur dans la requête SQL');
         }

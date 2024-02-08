@@ -8,11 +8,15 @@ if (isset($_POST['livre_id'])) {
 
     $connexion = dbconnect();
 
-    $stmt = $connexion->prepare("INSERT INTO emprunt (fkLecteur, fkLivre) VALUES (?, ?)");
+    $query = "INSERT INTO emprunt (fkLecteur, fkLivre) VALUES (?, ?)";
+    $stmt = $connexion->prepare($query);
+    enregistrerRequete($query);
     $success = $stmt->execute([$user_id, $livre_id]);
 
     if ($success) {
-        $update = $connexion->prepare("UPDATE livre SET disponible = 1 WHERE id = ?");
+        $query = "UPDATE livre SET disponible = 0 WHERE id = ?";
+        $update = $connexion->prepare($query);
+        enregistrerRequete($query);
         $update->execute([$livre_id]);
 
         $_SESSION['flash_message'] = "Vous avez emprunté le livre avec succès.";

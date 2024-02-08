@@ -19,6 +19,7 @@
 
           </div>
           <button type="submit" class="btn btn-primary">Se connecter</button>
+          <button type="button" class="btn btn-link" onclick="showInscriptionForm()">Pas encore inscrit ? S'inscrire ici.</button>
         </form>
 
 
@@ -40,8 +41,10 @@
             <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmez le mot de passe">
         </div>
         <button type="submit" class="btn btn-primary">S'inscrire</button>
-        </form>
-        <button type="button" class="btn btn-link" onclick="showInscriptionForm()">Pas encore inscrit ? S'inscrire ici.</button>
+        <button type="button" class="btn btn-link" onclick="showLoginForm()">Déjà inscrit ? Se connecter ici.</button>
+      </form>
+
+
 
       </div>
     </div>
@@ -53,4 +56,9 @@ function showInscriptionForm() {
     document.getElementById('formConnexion').classList.add('d-none');
     document.getElementById('formInscription').classList.remove('d-none');
 }
+function showLoginForm() {
+    document.getElementById('formInscription').classList.add('d-none');
+    document.getElementById('formConnexion').classList.remove('d-none');
+}
+
 </script>

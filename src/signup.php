@@ -14,8 +14,9 @@ if (isset($_POST['email'], $_POST['newUsername'], $_POST['newPassword'], $_POST[
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     $connexion = dbconnect();
-
-    $stmt = $connexion->prepare("INSERT INTO lecteur (email, pseudo, password) VALUES (?, ?, ?)");
+    $query = "INSERT INTO lecteur (email, pseudo, password) VALUES (?, ?, ?)";
+    $stmt = $connexion->prepare($query);
+    enregistrerRequete($query);
     $success = $stmt->execute([$email, $username, $hashedPassword]);
 
     if ($success) {

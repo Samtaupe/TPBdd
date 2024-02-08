@@ -5,8 +5,9 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
     $password = $_POST['password'];
     
     $connexion = dbconnect();
-
-    $stmt = $connexion->prepare("SELECT * FROM lecteur WHERE pseudo = ?");
+    $query = "SELECT * FROM lecteur WHERE pseudo = ?";
+    $stmt = $connexion->prepare($query);
+    enregistrerRequete($query);
     $stmt->execute([$username]);
     $user = $stmt->fetch();
     

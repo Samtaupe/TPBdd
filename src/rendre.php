@@ -8,7 +8,9 @@ if (isset($_POST['livre_id'])) {
 
     $connexion = dbconnect();
 
-    $stmt = $connexion->prepare("DELETE FROM emprunt WHERE emprunt.fkLecteur = ? AND emprunt.fkLivre= ?");
+    $query = "DELETE FROM emprunt WHERE emprunt.fkLecteur = ? AND emprunt.fkLivre= ?";
+    $stmt = $connexion->prepare($query);
+    enregistrerRequete($query);
     $success = $stmt->execute([$user_id, $livre_id]);
 
     if ($success) {
