@@ -64,3 +64,8 @@ SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
 SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
 SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
 SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
+SELECT livre.id, livre.nom, livre.auteur, livre.dateSortie FROM emprunt LEFT JOIN livre ON emprunt.fkLivre = livre.id WHERE emprunt.fkLecteur = ? 
+SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
+SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
+SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
+SELECT * FROM livre WHERE disponible = 1 ORDER BY id DESC LIMIT 3
